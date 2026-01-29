@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Haimas Parfume – Parfum Premium Tahan Lama</title>
+
+    <meta name="description" content="Haimas Parfume adalah parfum premium dengan aroma elegan dan tahan lama hingga 10 jam. Order mudah via WhatsApp.">
+    <meta name="keywords" content="parfum premium, parfum tahan lama, haimas parfume">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Haimas Parfume</h1>
+    <p>Parfum Premium • Tahan Lama • Elegan</p>
+</header>
+
+<main class="container">
+    <div class="product">
+        <img src="img/logo.jpeg" alt="Haimas Parfume">
+
+        <div class="product-info">
+            <h2>Haimas Parfume</h2>
+
+            <p class="subtitle">
+                💎Fresh All Day, Confident Always
+            </p>
+
+            <ul class="features">
+                <li>✔ Tahan 8–10 jam</li>
+                <li>✔ Cocok pria & wanita</li>
+                <li>✔ Aroma elegan & mewah</li>
+                <li>✔ Pengiriman seluruh Indonesia</li>
+            </ul>
+
+            <select id="variant">
+                <option value="Opima Night">Opima Night</option>
+                <option value="Souve Man">Souve Man</option>
+                <option value="Gentle Vip">Gentle Vip</option>
+                <option value="Million Luxe">Million Luxe</option>
+                <option value="Scandelle Soft">Scandelle Soft</option>
+            </select>
+
+            <select id="size">
+                <option value="35000">35 ml</option>
+                <option value="60000">50 ml</option>
+            </select>
+
+            <!-- HARGA -->
+            <h2 id="price"></h2>
+          
+
+            <button onclick="orderWA()">Order via WhatsApp</button>
+
+            <div class="badge">🔥 Best Seller</div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© <?= date('Y'); ?> Haimas Parfume. All rights reserved.</p>
+</footer>
+
+<script src="assets/js/script.js"></script>
+
+<script>
+    const sizeSelect = document.getElementById("size");
+    const priceText = document.getElementById("price");
+
+    function updatePrice() {
+        const price = parseInt(sizeSelect.value);
+        priceText.innerText = "Rp " + price.toLocaleString("id-ID");
+    }
+
+    sizeSelect.addEventListener("change", updatePrice);
+
+    // set harga awal saat page load
+    updatePrice();
+</script>
+
+</body>
+</html>

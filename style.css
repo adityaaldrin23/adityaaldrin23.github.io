@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f7f7f7;
+    color: #000000;
+}
+
+header {
+    background: linear-gradient(135deg, #1f234d, #252260);
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(108, 106, 189, 0.08);
+    border-radius: 50%;
+    top: -80px;
+    right: -80px;
+}
+
+header h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+header {
+    background: #0f172a;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.brand-tag {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.product {
+    display: flex;
+    gap: 30px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    position: relative;
+}
+
+.product img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-info h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 22px;
+    color: #21215e;
+    margin-bottom: 15px;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.features li {
+    margin-bottom: 6px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #181334;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #33385c;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #1f2d56;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .product {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .badge {
+        top: 10px;
+        right: 10px;
+    }
+}
